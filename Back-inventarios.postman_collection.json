@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "e946c5e3-c2e1-4e01-9665-378dee641d65",
+		"name": "Back-inventarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "4683425"
+	},
+	"item": [
+		{
+			"name": "tipoequipos",
+			"item": [
+				{
+					"name": "CrearTipoEquipo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" : \"Computador\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:5000/api/tipoequipos/"
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerTiposEquipos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/tipoequipos?estado=true",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tipoequipos"
+							],
+							"query": [
+								{
+									"key": "estado",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editarTipoEquipo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" : \"Computador\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:5000/api/tipoequipos/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "estados",
+			"item": [
+				{
+					"name": "obtenerEstados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:5000/api/estados/"
+					},
+					"response": []
+				},
+				{
+					"name": "crearEstado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" : \"en bodega\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:5000/api/estados/"
+					},
+					"response": []
+				},
+				{
+					"name": "EditarEstado",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" : \"en bodega\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:5000/api/estados/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuarios",
+			"item": [
+				{
+					"name": "crearUsuarios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "localhost:5000/api/usuarios"
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:5000/api/usuarios"
+					},
+					"response": []
+				},
+				{
+					"name": "EditarUsuarios",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "localhost:5000/api/usuarios"
+					},
+					"response": []
+				}
+				
+			]
+		},
+		{
+			"name": "marcas",
+			"item": [
+				{
+					"name": "crearMarca",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" : \"Lenovo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:5000/api/marcas"
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerMarcas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/marcas?estado=true",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"marcas"
+							],
+							"query": [
+								{
+									"key": "estado",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditarMarca",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" : \"Lenovo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:5000/api/marcas"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "inventarios",
+			"item": [
+				{
+					"name": "crearInventario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serial\": \"xbb11112233\",\r\n    \"modelo\": \"modelo3\",\r\n    \"descripcion\": \"portatil muy chevere\",\r\n    \"foto\": \"https://www.worten.es/i/dc40f0b7d6c9ef44a824492eed988df286acc94c.jpg\",\r\n    \"color\": \"negro\",\r\n    \"fechaCompra\": \"2023-02-15\",\r\n    \"precio\": 550,\r\n    \"usuario\": {\r\n        \"_id\": \"64150f7830d0d60f4bf3657a\"\r\n    },\r\n    \"marca\": {\r\n        \"_id\": \"6415100630d0d60f4bf36583\"\r\n    },\r\n    \"estado\": {\r\n        \"_id\": \"64150e1c30d0d60f4bf36570\"\r\n    },\r\n    \"tipoEquipo\": {\r\n        \"_id\": \"6415121d88b0d008d94c0b27\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:5000/api/inventarios/"
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerInventario",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3000/hello"
+			},
+			
+			"response": []
+		},
+		{
+					"name": "editarInventario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serial\": \"xbb11112233\",\r\n    \"modelo\": \"modelo3\",\r\n    \"descripcion\": \"portatil muy chevere\",\r\n    \"foto\": \"https://www.worten.es/i/dc40f0b7d6c9ef44a824492eed988df286acc94c.jpg\",\r\n    \"color\": \"negro\",\r\n    \"fechaCompra\": \"2023-02-15\",\r\n    \"precio\": 550,\r\n    \"usuario\": {\r\n        \"_id\": \"64150f7830d0d60f4bf3657a\"\r\n    },\r\n    \"marca\": {\r\n        \"_id\": \"6415100630d0d60f4bf36583\"\r\n    },\r\n    \"estado\": {\r\n        \"_id\": \"64150e1c30d0d60f4bf36570\"\r\n    },\r\n    \"tipoEquipo\": {\r\n        \"_id\": \"6415121d88b0d008d94c0b27\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:5000/api/inventarios/"
+					},
+					"response": []
+				}
+		
+	]
+}
